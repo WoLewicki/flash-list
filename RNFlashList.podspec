@@ -13,9 +13,9 @@ Pod::Spec.new do |s|
   s.source_files     = 'ios/Sources/**/*'
   s.requires_arc     = true
   s.swift_version    = '5.0'
+  s.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => '-D RCT_NEW_ARCH_ENABLED', }
 
   if defined?(install_modules_dependencies()) != nil
-    s.compiler_flags = folly_compiler_flags + " -DRCT_NEW_ARCH_ENABLED=1"
     install_modules_dependencies(s)
     s.ios.deployment_target = "12.4"
     s.platforms        = { :ios => '12.4', :tvos => '12.0' }

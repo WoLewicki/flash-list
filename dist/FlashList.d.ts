@@ -103,6 +103,7 @@ declare class FlashList<T> extends React.PureComponent<FlashListProps<T>, FlashL
         offset: number;
     }): void;
     getScrollableNode(): number | null;
+    getNativeScrollRef(): number | null;
     /**
      * Allows access to internal recyclerlistview. This is useful for enabling access to its public APIs.
      * Warning: We may swap recyclerlistview for something else in the future. Use with caution.

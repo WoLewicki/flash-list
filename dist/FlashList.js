@@ -478,6 +478,12 @@ var FlashList = /** @class */ (function (_super) {
         var _a, _b;
         return ((_b = (_a = this.rlvRef) === null || _a === void 0 ? void 0 : _a.getScrollableNode) === null || _b === void 0 ? void 0 : _b.call(_a)) || null;
     };
+    FlashList.prototype.getNativeScrollRef = function () {
+        var _a, _b;
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        return ((_b = (_a = this.rlvRef) === null || _a === void 0 ? void 0 : _a.getNativeScrollRef) === null || _b === void 0 ? void 0 : _b.call(_a)) || null;
+    };
     Object.defineProperty(FlashList.prototype, "recyclerlistview_unsafe", {
         /**
          * Allows access to internal recyclerlistview. This is useful for enabling access to its public APIs.
